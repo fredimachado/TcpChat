@@ -180,9 +180,9 @@ namespace ChatApi
                 // Ignore unknown message types. (`message` == `null`)
                 if (message != null)
                     result.Add(message);
-
-                _pipelineSocket.InputPipe.AdvanceTo(sequenceReader.Position);
             }
+
+            _pipelineSocket.InputPipe.AdvanceTo(sequenceReader.Position);
 
             return result;
         }
